@@ -1,0 +1,25 @@
+CREATE TABLE MovieEntity (
+    remoteId INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER AS Int NOT NULL,
+    title TEXT NOT NULL,
+    poster_path TEXT NOT NULL,
+    release_date TEXT NOT NULL,
+    vote_average REAL NOT NULL
+);
+
+count:
+SELECT count(*) FROM MovieEntity;
+
+insert:
+INSERT OR REPLACE
+INTO MovieEntity
+VALUES (:remoteId, :id, :title, :poster_path, :release_date, :vote_average);
+
+getMovie:
+SELECT *
+FROM MovieEntity
+ORDER BY remoteId
+LIMIT :limit OFFSET :offset;
+
+clearAll:
+DELETE FROM MovieEntity;

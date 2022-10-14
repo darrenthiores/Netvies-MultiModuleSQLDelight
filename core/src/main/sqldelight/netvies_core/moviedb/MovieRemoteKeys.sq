@@ -1,0 +1,18 @@
+CREATE TABLE MovieRemoteKeys (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    prevPage INTEGER,
+    nextPage INTEGER
+);
+
+getRemoteKeys:
+SELECT *
+FROM MovieRemoteKeys
+WHERE id = :id;
+
+addAllRemoteKeys:
+INSERT OR REPLACE
+INTO MovieRemoteKeys
+VALUES (:id, :prevPage, :nextPage);
+
+deleteAllRemoteKeys:
+DELETE FROM MovieRemoteKeys;
