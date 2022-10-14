@@ -8,7 +8,8 @@ in the buildConfigField("String", "API_KEY", '"YOUR API KEY HERE"')
 
 <img width="500" alt="Screen Shot 2022-05-24 at 23 53 31" src="https://user-images.githubusercontent.com/69592810/170092188-456fb630-5e3d-4db7-ab2e-0514a96d1cb5.png">
 
-#Issue
+Issue:
+
 There is an issue in this app when using SqlDelight as a PagingSource, i already follow the documentation
 but the app always crash when reaching page 5, with error IndexOutOfBounds throwed by OffsetPageSource
 
